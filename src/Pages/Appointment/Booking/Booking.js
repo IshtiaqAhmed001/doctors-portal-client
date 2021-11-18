@@ -9,7 +9,7 @@ const Booking = ({ booking, date, setBookingSuccess }) => {
     const [openBooking, setBookingOpen] = React.useState(false);
     const handleBookingOpen = () => setBookingOpen(true);
     const handleBookingClose = () => setBookingOpen(false);
-    const { name, time, space } = booking;
+    const { name, time, price, space } = booking;
     return (
         <>
             <Grid item xs={12} sm={6} md={4}>
@@ -19,6 +19,9 @@ const Booking = ({ booking, date, setBookingSuccess }) => {
                     </Typography>
                     <Typography variant="h6" gutterBottom component="div">
                         {time}
+                    </Typography>
+                    <Typography variant="caption" display="block" gutterBottom>
+                        Price ${price}
                     </Typography>
                     <Typography variant="caption" display="block" gutterBottom>
                         {space} SPACES AVAILABLE
